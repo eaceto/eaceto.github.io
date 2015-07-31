@@ -5,7 +5,7 @@
 
     <link href="/static/images/favicon.ico" rel='shortcut icon' type='image/x-icon'>
 
-    <link rel="stylesheet" href="css/material.blue-indigo.min.css" />
+    <link rel="stylesheet" href="css/material.indigo-deep_purple.min.css" />
     <link href='css/google-roboto.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -31,16 +31,36 @@
             <!-- Title -->
             <span class="mdl-layout-title">Playground</span>
             <div class="mdl-layout-spacer"></div>
+
+            <!--
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp"><i class="material-icons">search</i></label>
                 <div class="mdl-textfield__expandable-holder">
                     <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" />
-                    <!-- / .mdl-textfield__expandable-holder --></div>
-                <!-- / .mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right --></div>
-            <!-- / .mdl-layout__header-row --></div>
+                </div>
+            </div>
+            -->
+
+            <!-- Right aligned menu below button -->
+
+            <button id="demo-menu-lower-right"
+                    class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="demo-menu-lower-right">
+                <li class="mdl-menu__item">Some Action</li>
+                <li class="mdl-menu__item">Another Action</li>
+                <li disabled class="mdl-menu__item">Disabled Action</li>
+                <li class="mdl-menu__item">Yet Another Action</li>
+            </ul>
+
+        </div>
 
         <!-- Bottom row, not visible on scroll -->
         <div class="mdl-layout__header-row">
+            
             <div class="mdl-layout-spacer"></div>
 
             <!-- Navigation -->
@@ -50,8 +70,11 @@
                 <a class="mdl-navigation__link" href="">Link</a>
                 <a class="mdl-navigation__link" href="">Link</a>
             </nav>
+
             <!-- / .mdl-layout__header-row --></div>
     </header>
+
+    <div id="progress-div" class="mdl-progress mdl-js-progress progress-demo" style="width: 100%; "></div>
 
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Playground</span>
@@ -66,9 +89,99 @@
     <main class="mdl-layout__content">
         <div class="page-content">
 
-            <img src="http://creatorclip.info/wp-content/uploads/2015/07/material.png">
+            <!--<img src="http://creatorclip.info/wp-content/uploads/2015/07/material.png">-->
+
+            <!-- Simple Textfield -->
+            A form
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="firstname" />
+                    <label class="mdl-textfield__label" for="firstname">Nombre</label>
+                </div>
+                <br/>
+
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="lastname" />
+                    <label class="mdl-textfield__label" for="lastname">Apellido</label>
+                </div>
+                <br/>
+
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="dni" />
+                    <label class="mdl-textfield__label" for="dni">DNI</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+
+                <!-- Accent-colored raised button with ripple -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Send
+                </button>
+            </form>
+
+            A switch
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                <input type="checkbox" id="switch-2" class="mdl-switch__input" />
+                <span class="mdl-switch__label"></span>
+            </label>
+
+            A table
+            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                <thead>
+                <tr>
+                    <th class="mdl-data-table__cell--non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                </tbody>
+            </table>
+
+            Buttons
+            <br/>
+            <!-- Colored FAB button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">add</i>
+            </button>
+            <br/><br/>
+
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">save</i>
+            </button>
+            <br/><br/>
+
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">print</i>
+            </button>
+            <br/><br/>
+
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">share</i>
+            </button>
+            <br/><br/>
+
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">delete</i>
+            </button>
+            <br/><br/>
 
 
+            Some lists
             <ol>
                 <li>Please Please Me (1963)</li>
                 <li>With the Beatles (1963)</li>
@@ -144,6 +257,10 @@
     $(document).ready(function(){
         var h = $("#footer-container").height()*2.5;
         $("#footer-spacer").height(h);
+
+        document.querySelector('#progress-div').addEventListener('mdl-componentupgraded', function() {
+            this.MaterialProgress.setProgress(10);
+        });
     });
 </script>
 </html>
