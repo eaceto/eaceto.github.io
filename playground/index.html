@@ -31,7 +31,7 @@
             <!-- Title -->
             <span class="mdl-layout-title">Playground</span>
             <div class="mdl-layout-spacer"></div>
-            
+
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp"><i class="material-icons">search</i></label>
                 <div class="mdl-textfield__expandable-holder">
@@ -237,7 +237,7 @@
             <!-- / .page-content --></div>
 
             <!-- spacer for footer effect -->
-            <div style="width: 100%; height: 86px;" id="footer-spacer"/>
+            <div style="width: 100%;" id="footer-spacer"/>
             <footer class="mdl-mini-footer" style="left: 0;
                 position: fixed;
                 text-align: center;
@@ -261,7 +261,7 @@
 
 <script language="JavaScript">
     $(document).ready(function(){
-        var h = $("#footer-container").height()*2.5;
+        var h = $("#footer-container").height();
         $("#footer-spacer").height(h);
 
         document.querySelector('#progress-div').addEventListener('mdl-componentupgraded', function() {
