@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="/static/images/favicon.ico" rel='shortcut icon' type='image/x-icon'>
 
@@ -12,8 +14,6 @@
     <script src="js/material-1.0.2.min.js"></script>
 
     <script src="js/jquery-2.1.4.min.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Playground in Material Design - Ezequiel Aceto</title>
 
@@ -31,36 +31,41 @@
             <!-- Title -->
             <span class="mdl-layout-title">Playground</span>
             <div class="mdl-layout-spacer"></div>
-
-            <!--
+            
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp"><i class="material-icons">search</i></label>
                 <div class="mdl-textfield__expandable-holder">
                     <input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp" />
                 </div>
             </div>
-            -->
 
             <!-- Right aligned menu below button -->
 
-            <button id="demo-menu-lower-right"
+            <!--
+            <button id="menu-lower-right"
                     class="mdl-button mdl-js-button mdl-button--icon">
                 <i class="material-icons">more_vert</i>
             </button>
 
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                for="demo-menu-lower-right">
+                for="menu-lower-right">
                 <li class="mdl-menu__item">Some Action</li>
                 <li class="mdl-menu__item">Another Action</li>
                 <li disabled class="mdl-menu__item">Disabled Action</li>
                 <li class="mdl-menu__item">Yet Another Action</li>
             </ul>
+            -->
 
         </div>
 
         <!-- Bottom row, not visible on scroll -->
+        <style>
+            .waterfall-demo-header-nav .mdl-navigation__link:last-of-type  {
+                padding-right: 0;
+            }
+        </style>
         <div class="mdl-layout__header-row">
-            
+
             <div class="mdl-layout-spacer"></div>
 
             <!-- Navigation -->
@@ -70,9 +75,9 @@
                 <a class="mdl-navigation__link" href="">Link</a>
                 <a class="mdl-navigation__link" href="">Link</a>
             </nav>
-
-            <!-- / .mdl-layout__header-row --></div>
+        </div>
     </header>
+
 
     <div id="progress-div" class="mdl-progress mdl-js-progress progress-demo" style="width: 100%; "></div>
 
